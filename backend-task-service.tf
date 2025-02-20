@@ -73,7 +73,7 @@ resource "aws_ecs_service" "back-ecs_service" {
 
   network_configuration {
     subnets         = [aws_subnet.public_subnet1.id, aws_subnet.public_subnet2.id]
-    security_groups = [aws_security_group.ecs_sg.id]
+    security_groups = [aws_security_group.lb_sg.id]
     assign_public_ip = true
   }
 
